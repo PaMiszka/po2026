@@ -11,20 +11,29 @@ public class Lotto1 {
         }
 
         Random generator = new Random();
-        ArrayList<Integer> wyniki = new ArrayList<>();
+        long liczbalosowan = 0;
+        long start = System.currentTimeMillis();
 
-        while(wyniki.size()<6){
-            int liczba = generator.nextInt(49)+1;
+        while (true){
+            liczbalosowan++;
+            ArrayList<Integer> wyniki = new ArrayList<>();
+            while(wyniki.size()<6){
+                int liczba = generator.nextInt(49)+1;
 
-            if(!wyniki.contains(liczba)){
-                wyniki.add(liczba);
+                if(!wyniki.contains(liczba)){
+                    wyniki.add(liczba);
+                }
+            }
+            typy.retainAll(typy);
+            if(wyniki.size()==6){
+                break;
             }
         }
-        System.out.println("wyniki : " + wyniki);
-        System.out.println("typy : " + typy);
+        long koniec=System.currentTimeMillis();
+        long czas=koniec-start;
 
-        typy.retainAll(wyniki);
 
-        System.out.println("liczba trafien " + typy.size());
+        System.out.println("liczba losowan"+liczbalosowan);
+        System.out.println("czas w ms" + czas);
     }
 }
