@@ -24,7 +24,7 @@ public class Lotto1 {
                     wyniki.add(liczba);
                 }
             }
-            typy.retainAll(typy);
+            wyniki.retainAll(typy);
             if(wyniki.size()==6){
                 break;
             }
