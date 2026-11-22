@@ -8,4 +8,8 @@ public class Parrot extends Animal {
     public String getDescription(){
         return "Imie papugi : " + name;
     }
+
+    public void glos() {
+        System.out.println("kra kra");
+    }
 }

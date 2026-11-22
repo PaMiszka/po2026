@@ -9,7 +9,7 @@ public class Snake extends Animal{
         return "Imie węża : " + name;
     }
 
-    public void makeSound() {
+    public void glos() {
         System.out.println("sssss");
     }
 }

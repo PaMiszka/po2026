@@ -8,7 +8,6 @@ import agh.po.animals.Snake;
 import java.util.Random;
 
 public class Zoo {
-    import java.util.Random;
 
     Animal[] animals = new Animal[100];
 
@@ -24,7 +23,7 @@ public class Zoo {
                 animals[i]=new Dog("pies numer"+i);
             }
             else{
-                animals[i]=new Snake('waz numer'+i);
+                animals[i]=new Snake("waz numer"+i);
             }
         }
     }
@@ -46,8 +45,9 @@ public class Zoo {
 
         for (int i = 0; i < 5; i++) {
             Animal animal = myZoo.animals[i];
-            int legs = animal.getLegs();
+            int animalLegs = animal.getLegs();
             String desc = animal.getDescription();
+            System.out.println(desc + "ma"+animalLegs+"nog");
             animal.glos();
         }
     }

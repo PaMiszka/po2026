@@ -1,4 +1,5 @@
-import java.util.Scanner;
+package agh.po.lab1;
+//import java.util.Scanner;
 
 /*public class Choinka {
     public static void main(){
@@ -20,10 +21,16 @@ import java.util.Scanner;
 
 public class Choinka {
     public static void main(String[] args){
+        int wysokosc;
 
-        System.out.println("Wysokosc : "+ args[0]);
-
-        int wysokosc = Integer.parseInt(args[0]);
+        if (args.length>0) {
+            wysokosc = Integer.parseInt(args[0]);
+            System.out.println("Wysokosc : " + wysokosc);
+        }
+        else{
+            wysokosc=5;
+            System.out.println("Wysokosc (stala) : "+wysokosc);
+        }
 
         for(int i=0; i<wysokosc; i++){
             for(int j = 0; j<=i;j++){

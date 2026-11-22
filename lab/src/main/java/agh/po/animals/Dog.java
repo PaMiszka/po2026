@@ -9,7 +9,7 @@ public class Dog extends Animal{
         return "Imie psa : " + name;
     }
 
-    public void makeSound() {
+    public void glos() {
         System.out.println("hau hau");
     }
 }
