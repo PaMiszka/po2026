@@ -1,0 +1,38 @@
+package agh.po.symulator;
+
+public class Silnik extends Komponent {
+    private int maxObroty;
+    private int obroty;
+
+    public Silnik(String nazwa,double waga,double cena,int maxObroty) {
+        super(nazwa,waga,cena);
+        this.maxObroty=maxObroty;
+        this.obroty=0;
+    }
+    public void uruchom() {
+        this.obroty=600;
+    }
+    public void zatrzymaj() {
+        this.obroty=0;
+    }
+    public void zwiekszObroty() {
+        if (obroty+500<=maxObroty) {
+            obroty+=500;
+        } else {
+            obroty=maxObroty;
+        }
+    }
+    public void zmniejszObroty() {
+        if (obroty-500 >= 0) {
+            obroty -= 500;
+        } else {
+            obroty=0;
+        }
+    }
+    public int getObroty() {
+        return obroty;
+    }
+    public int getMaxObroty() {
+        return maxObroty;
+    }
+}
